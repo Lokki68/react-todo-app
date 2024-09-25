@@ -10,8 +10,8 @@ createRoot(document.getElementById('root')!).render(
     <KindeProvider
         clientId="16a7172736004e65988d9ebd3813dc6f"
         domain="https://lokkidev.kinde.com"
-        redirectUri="http://localhost:5173"
-        logoutUri="http://localhost:5173"
+        redirectUri={process.env.NODE_ENV === 'production' ? "https://react-todo-app-umber-omega.vercel.app" : "http://localhost:5173" }
+        logoutUri={process.env.NODE_ENV === 'production' ? "https://react-todo-app-umber-omega.vercel.app" : "http://localhost:5173" }
     >
 
     <TodosContextProvider >
